@@ -1,0 +1,381 @@
+
+ Adjacency list of vertex 0
+ head 
+ Adjacency list of vertex 1
+ head -> 2
+ Adjacency list of vertex 2
+ head -> 1-> 3
+ Adjacency list of vertex 3
+ head -> 2-> 4-> 5
+ Adjacency list of vertex 4
+ head -> 3-> 6-> 7
+ Adjacency list of vertex 5
+ head -> 6-> 3-> 9
+ Adjacency list of vertex 6
+ head -> 4-> 5-> 10
+ Adjacency list of vertex 7
+ head -> 4-> 8
+ Adjacency list of vertex 8
+ head -> 7
+ Adjacency list of vertex 9
+ head -> 5
+ Adjacency list of vertex 10
+ head -> 6-> 11
+ Adjacency list of vertex 11
+ head -> 10-> 12-> 13
+ Adjacency list of vertex 12
+ head -> 11-> 13
+ Adjacency list of vertex 13
+ head -> 11-> 12
+ -------------------------------------------- 
+
+ Following are connected components 
+0 
+1 2 3 4 6 5 9 10 11 12 13 7 8 
+
+ -------------------------------------------- 
+
+ finding cycle
+Cycle found: 3 5 6 4 3 
+
+ --------------shortest path------------------------------ 
+
+Getting the shortest path from 1 to all other nodes.
+
+Printing the shortest paths for node 1.
+There is no path from 1 to node 0
+The distance from node 1 to node 1 is: 0 and the path is 1 
+The distance from node 1 to node 2 is: 1 and the path is 1 - 2 
+The distance from node 1 to node 3 is: 2 and the path is 1 - 2 - 3 
+The distance from node 1 to node 4 is: 3 and the path is 1 - 2 - 3 - 4 
+The distance from node 1 to node 5 is: 3 and the path is 1 - 2 - 3 - 5 
+The distance from node 1 to node 6 is: 4 and the path is 1 - 2 - 3 - 4 - 6 
+The distance from node 1 to node 7 is: 4 and the path is 1 - 2 - 3 - 4 - 7 
+The distance from node 1 to node 8 is: 5 and the path is 1 - 2 - 3 - 4 - 7 - 8 
+The distance from node 1 to node 9 is: 4 and the path is 1 - 2 - 3 - 5 - 9 
+The distance from node 1 to node 10 is: 5 and the path is 1 - 2 - 3 - 4 - 6 - 10 
+The distance from node 1 to node 11 is: 6 and the path is 1 - 2 - 3 - 4 - 6 - 10 - 11 
+The distance from node 1 to node 12 is: 7 and the path is 1 - 2 - 3 - 4 - 6 - 10 - 11 - 12 
+The distance from node 1 to node 13 is: 7 and the path is 1 - 2 - 3 - 4 - 6 - 10 - 11 - 13 
+
+ --------------testing simulator functions------------------------------ 
+
+ --------------testing with n cycle------------------------------ 
+
+ Adjacency list of vertex 0
+ head -> 1-> 10
+ Adjacency list of vertex 1
+ head -> 0-> 2
+ Adjacency list of vertex 2
+ head -> 1-> 3
+ Adjacency list of vertex 3
+ head -> 2-> 4
+ Adjacency list of vertex 4
+ head -> 3-> 5
+ Adjacency list of vertex 5
+ head -> 4-> 6
+ Adjacency list of vertex 6
+ head -> 5-> 7
+ Adjacency list of vertex 7
+ head -> 6-> 8
+ Adjacency list of vertex 8
+ head -> 7-> 9
+ Adjacency list of vertex 9
+ head -> 8-> 10
+ Adjacency list of vertex 10
+ head -> 0-> 9
+ -------------------------------------------- 
+
+ Following are connected components 
+0 1 2 3 4 5 6 7 8 9 10 
+
+ -------------------------------------------- 
+
+ finding cycle
+Cycle found: 0 10 9 8 7 6 5 4 3 2 1 0 
+
+ --------------shortest path------------------------------ 
+
+Getting the shortest path from 1 to all other nodes.
+
+Printing the shortest paths for node 1.
+The distance from node 1 to node 0 is: 1 and the path is 1 - 0 
+The distance from node 1 to node 1 is: 0 and the path is 1 
+The distance from node 1 to node 2 is: 1 and the path is 1 - 2 
+The distance from node 1 to node 3 is: 2 and the path is 1 - 2 - 3 
+The distance from node 1 to node 4 is: 3 and the path is 1 - 2 - 3 - 4 
+The distance from node 1 to node 5 is: 4 and the path is 1 - 2 - 3 - 4 - 5 
+The distance from node 1 to node 6 is: 5 and the path is 1 - 2 - 3 - 4 - 5 - 6 
+The distance from node 1 to node 7 is: 5 and the path is 1 - 0 - 10 - 9 - 8 - 7 
+The distance from node 1 to node 8 is: 4 and the path is 1 - 0 - 10 - 9 - 8 
+The distance from node 1 to node 9 is: 3 and the path is 1 - 0 - 10 - 9 
+The distance from node 1 to node 10 is: 2 and the path is 1 - 0 - 10 
+
+ --------------testing with connected graph------------------------------ 
+
+ Adjacency list of vertex 0
+ head -> 1-> 2-> 3-> 4-> 5-> 6-> 7-> 8-> 9
+ Adjacency list of vertex 1
+ head -> 0-> 2-> 3-> 4-> 5-> 6-> 7-> 8-> 9
+ Adjacency list of vertex 2
+ head -> 0-> 1-> 3-> 4-> 5-> 6-> 7-> 8-> 9
+ Adjacency list of vertex 3
+ head -> 0-> 1-> 2-> 4-> 5-> 6-> 7-> 8-> 9
+ Adjacency list of vertex 4
+ head -> 0-> 1-> 2-> 3-> 5-> 6-> 7-> 8-> 9
+ Adjacency list of vertex 5
+ head -> 0-> 1-> 2-> 3-> 4-> 6-> 7-> 8-> 9
+ Adjacency list of vertex 6
+ head -> 0-> 1-> 2-> 3-> 4-> 5-> 7-> 8-> 9
+ Adjacency list of vertex 7
+ head -> 0-> 1-> 2-> 3-> 4-> 5-> 6-> 8-> 9
+ Adjacency list of vertex 8
+ head -> 0-> 1-> 2-> 3-> 4-> 5-> 6-> 7-> 9
+ Adjacency list of vertex 9
+ head -> 0-> 1-> 2-> 3-> 4-> 5-> 6-> 7-> 8
+ -------------------------------------------- 
+
+ Following are connected components 
+0 1 2 3 4 5 6 7 8 9 
+
+ -------------------------------------------- 
+
+ finding cycle
+Cycle found: 0 2 1 0 
+
+ --------------shortest path------------------------------ 
+
+Getting the shortest path from 1 to all other nodes.
+
+Printing the shortest paths for node 1.
+The distance from node 1 to node 0 is: 1 and the path is 1 - 0 
+The distance from node 1 to node 1 is: 0 and the path is 1 
+The distance from node 1 to node 2 is: 1 and the path is 1 - 2 
+The distance from node 1 to node 3 is: 1 and the path is 1 - 3 
+The distance from node 1 to node 4 is: 1 and the path is 1 - 4 
+The distance from node 1 to node 5 is: 1 and the path is 1 - 5 
+The distance from node 1 to node 6 is: 1 and the path is 1 - 6 
+The distance from node 1 to node 7 is: 1 and the path is 1 - 7 
+The distance from node 1 to node 8 is: 1 and the path is 1 - 8 
+The distance from node 1 to node 9 is: 1 and the path is 1 - 9 
+
+ --------------testing with empty graph------------------------------ 
+
+ Adjacency list of vertex 0
+ head 
+ Adjacency list of vertex 1
+ head 
+ Adjacency list of vertex 2
+ head 
+ Adjacency list of vertex 3
+ head 
+ Adjacency list of vertex 4
+ head 
+ Adjacency list of vertex 5
+ head 
+ Adjacency list of vertex 6
+ head 
+ Adjacency list of vertex 7
+ head 
+ Adjacency list of vertex 8
+ head 
+ Adjacency list of vertex 9
+ head 
+ Adjacency list of vertex 10
+ head 
+ -------------------------------------------- 
+
+ Following are connected components 
+0 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+
+ -------------------------------------------- 
+
+ finding cycle
+Acyclic
+
+ --------------shortest path------------------------------ 
+
+Getting the shortest path from 1 to all other nodes.
+
+Printing the shortest paths for node 1.
+There is no path from 1 to node 0
+The distance from node 1 to node 1 is: 0 and the path is 1 
+There is no path from 1 to node 2
+There is no path from 1 to node 3
+There is no path from 1 to node 4
+There is no path from 1 to node 5
+There is no path from 1 to node 6
+There is no path from 1 to node 7
+There is no path from 1 to node 8
+There is no path from 1 to node 9
+There is no path from 1 to node 10
+
+ --------------testing with heap ----------------------------- 
+
+ Adjacency list of vertex 0
+ head -> 0-> 0-> 10-> 1-> 2
+ Adjacency list of vertex 1
+ head -> 0-> 10-> 3-> 4
+ Adjacency list of vertex 2
+ head -> 0-> 10-> 5-> 6
+ Adjacency list of vertex 3
+ head -> 1-> 10-> 7-> 8
+ Adjacency list of vertex 4
+ head -> 1-> 10-> 9-> 10
+ Adjacency list of vertex 5
+ head -> 2-> 10
+ Adjacency list of vertex 6
+ head -> 2-> 10
+ Adjacency list of vertex 7
+ head -> 3-> 10
+ Adjacency list of vertex 8
+ head -> 3-> 10
+ Adjacency list of vertex 9
+ head -> 4-> 10
+ Adjacency list of vertex 10
+ head -> 0-> 1-> 2-> 3-> 4-> 5-> 6-> 7-> 8-> 9-> 4-> 10-> 10
+ -------------------------------------------- 
+
+ Following are connected components 
+0 10 1 3 7 8 4 9 2 5 6 
+
+ -------------------------------------------- 
+
+ finding cycle
+Cycle found: 0 0 
+
+ --------------shortest path------------------------------ 
+
+Getting the shortest path from 1 to all other nodes.
+
+Printing the shortest paths for node 1.
+The distance from node 1 to node 0 is: 1 and the path is 1 - 0 
+The distance from node 1 to node 1 is: 0 and the path is 1 
+The distance from node 1 to node 2 is: 2 and the path is 1 - 0 - 2 
+The distance from node 1 to node 3 is: 1 and the path is 1 - 3 
+The distance from node 1 to node 4 is: 1 and the path is 1 - 4 
+The distance from node 1 to node 5 is: 2 and the path is 1 - 10 - 5 
+The distance from node 1 to node 6 is: 2 and the path is 1 - 10 - 6 
+The distance from node 1 to node 7 is: 2 and the path is 1 - 3 - 7 
+The distance from node 1 to node 8 is: 2 and the path is 1 - 3 - 8 
+The distance from node 1 to node 9 is: 2 and the path is 1 - 4 - 9 
+The distance from node 1 to node 10 is: 1 and the path is 1 - 10 
+
+ --------------testing with truncated heap ----------------------------- 
+
+ Adjacency list of vertex 0
+ head 
+ Adjacency list of vertex 1
+ head 
+ Adjacency list of vertex 2
+ head 
+ Adjacency list of vertex 3
+ head 
+ Adjacency list of vertex 4
+ head -> 10-> 9-> 10
+ Adjacency list of vertex 5
+ head -> 10
+ Adjacency list of vertex 6
+ head -> 10
+ Adjacency list of vertex 7
+ head -> 10
+ Adjacency list of vertex 8
+ head -> 10
+ Adjacency list of vertex 9
+ head -> 4-> 10
+ Adjacency list of vertex 10
+ head -> 4-> 5-> 6-> 7-> 8-> 9-> 4-> 10-> 10
+ -------------------------------------------- 
+
+ Following are connected components 
+0 
+1 
+2 
+3 
+4 10 5 6 7 8 9 
+
+ -------------------------------------------- 
+
+ finding cycle
+Cycle found: 4 9 10 4 
+
+ --------------shortest path------------------------------ 
+
+Getting the shortest path from 6 to all other nodes.
+
+Printing the shortest paths for node 6.
+There is no path from 6 to node 0
+There is no path from 6 to node 1
+There is no path from 6 to node 2
+There is no path from 6 to node 3
+The distance from node 6 to node 4 is: 2 and the path is 6 - 10 - 4 
+The distance from node 6 to node 5 is: 2 and the path is 6 - 10 - 5 
+The distance from node 6 to node 6 is: 0 and the path is 6 
+The distance from node 6 to node 7 is: 2 and the path is 6 - 10 - 7 
+The distance from node 6 to node 8 is: 2 and the path is 6 - 10 - 8 
+The distance from node 6 to node 9 is: 2 and the path is 6 - 10 - 9 
+The distance from node 6 to node 10 is: 1 and the path is 6 - 10 
+
+ --------------testing with EquivalenceModKGraph ----------------------------- 
+
+ Adjacency list of vertex 0
+ head -> 4-> 8
+ Adjacency list of vertex 1
+ head -> 5-> 9
+ Adjacency list of vertex 2
+ head -> 6-> 10
+ Adjacency list of vertex 3
+ head -> 7
+ Adjacency list of vertex 4
+ head -> 0-> 8
+ Adjacency list of vertex 5
+ head -> 1-> 9
+ Adjacency list of vertex 6
+ head -> 2-> 10
+ Adjacency list of vertex 7
+ head -> 3
+ Adjacency list of vertex 8
+ head -> 0-> 4
+ Adjacency list of vertex 9
+ head -> 1-> 5
+ Adjacency list of vertex 10
+ head -> 2-> 6
+ -------------------------------------------- 
+
+ Following are connected components 
+0 4 8 
+1 5 9 
+2 6 10 
+3 7 
+
+ -------------------------------------------- 
+
+ finding cycle
+Cycle found: 0 8 4 0 
+
+ --------------shortest path------------------------------ 
+
+Getting the shortest path from 6 to all other nodes.
+
+Printing the shortest paths for node 6.
+There is no path from 6 to node 0
+There is no path from 6 to node 1
+The distance from node 6 to node 2 is: 1 and the path is 6 - 2 
+There is no path from 6 to node 3
+There is no path from 6 to node 4
+There is no path from 6 to node 5
+The distance from node 6 to node 6 is: 0 and the path is 6 
+There is no path from 6 to node 7
+There is no path from 6 to node 8
+There is no path from 6 to node 9
+The distance from node 6 to node 10 is: 1 and the path is 6 - 10 
